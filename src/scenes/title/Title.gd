@@ -11,3 +11,7 @@ func _ready():
 
 func _on_CreditsButton_pressed():
 	SceneChanger.change_scene("res://src/scenes/credits/Credits.tscn", 0.25)
+
+
+func _on_PlayButton_pressed():
+	SceneChanger.change_scene("res://src/scenes/level-1/Level1.tscn", 0.25)
