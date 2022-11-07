@@ -7,7 +7,7 @@ extends Sprite
 # enums
 
 # constants
-const VELOCITY = 15
+const VELOCITY = 10
 
 # exported variables
 

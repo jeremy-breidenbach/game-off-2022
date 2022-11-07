@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/scenes/title/Title.gd" type="Script" id=1]
 [ext_resource path="res://src/fonts/TitanOne_120.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/fonts/TitanOne_60.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/fonts/TitanOne_36.tres" type="DynamicFont" id=4]
 
 [node name="Title" type="Node"]
 script = ExtResource( 1 )
@@ -97,5 +98,204 @@ rect_min_size = Vector2( 600, 120 )
 custom_fonts/font = ExtResource( 3 )
 text = "Credits"
 
+[node name="InstructionsPopup" type="PopupDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -607.5
+margin_right = 607.5
+margin_bottom = 400.0
+rect_min_size = Vector2( 1215, 800 )
+
+[node name="ColorRect" type="ColorRect" parent="InstructionsPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.4, 0.4, 0.4, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="InstructionsPopup/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.5
+margin_right = 0.5
+border_color = Color( 0.2, 0.2, 0.2, 1 )
+border_width = 20.0
+editor_only = false
+
+[node name="MarginContainer" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1195.0
+margin_bottom = 780.0
+
+[node name="MarginContainer" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_right = 1175.0
+margin_bottom = 158.0
+custom_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer"]
+margin_top = 20.0
+margin_right = 1175.0
+margin_bottom = 158.0
+custom_fonts/font = ExtResource( 2 )
+text = "Instructions"
+align = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_top = 162.0
+margin_right = 1175.0
+margin_bottom = 264.0
+custom_constants/margin_top = 60
+custom_constants/margin_left = 60
+
+[node name="Label" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 1175.0
+margin_bottom = 102.0
+custom_fonts/font = ExtResource( 4 )
+text = "Some text goes here..."
+
+[node name="CenterContainer" type="CenterContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_top = 268.0
+margin_right = 1175.0
+margin_bottom = 448.0
+
+[node name="MarginContainer3" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer"]
+margin_left = 287.0
+margin_right = 887.0
+margin_bottom = 180.0
+size_flags_horizontal = 0
+custom_constants/margin_top = 60
+
+[node name="CloseInstructionsPopupButton" type="Button" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer/MarginContainer3"]
+unique_name_in_owner = true
+margin_top = 60.0
+margin_right = 600.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 600, 120 )
+custom_fonts/font = ExtResource( 3 )
+text = "Close"
+
+[node name="CreditsPopup" type="PopupDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -607.5
+margin_top = -800.0
+margin_right = 607.5
+rect_min_size = Vector2( 1215, 800 )
+
+[node name="ColorRect" type="ColorRect" parent="CreditsPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.4, 0.4, 0.4, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="CreditsPopup/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0.2, 0.2, 0.2, 1 )
+border_width = 20.0
+editor_only = false
+
+[node name="MarginContainer" type="MarginContainer" parent="CreditsPopup/ColorRect/ReferenceRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1195.0
+margin_bottom = 780.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_right = 1175.0
+margin_bottom = 158.0
+custom_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer"]
+margin_top = 20.0
+margin_right = 1175.0
+margin_bottom = 158.0
+custom_fonts/font = ExtResource( 2 )
+text = "Credits"
+align = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_top = 162.0
+margin_right = 1175.0
+margin_bottom = 402.0
+custom_constants/margin_top = 60
+custom_constants/margin_left = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2"]
+margin_left = 60.0
+margin_top = 60.0
+margin_right = 1175.0
+margin_bottom = 240.0
+
+[node name="Label" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+margin_right = 1115.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 4 )
+text = "Jeremy Breidenbach"
+
+[node name="Label2" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+margin_top = 46.0
+margin_right = 1115.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 4 )
+text = "Autumn Breidenbach"
+
+[node name="Label3" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+margin_top = 92.0
+margin_right = 1115.0
+margin_bottom = 134.0
+custom_fonts/font = ExtResource( 4 )
+text = "Eve Breidenbach"
+
+[node name="Label4" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+margin_top = 138.0
+margin_right = 1115.0
+margin_bottom = 180.0
+custom_fonts/font = ExtResource( 4 )
+text = "Meghan Breidenbach"
+
+[node name="CenterContainer" type="CenterContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_top = 406.0
+margin_right = 1175.0
+margin_bottom = 586.0
+
+[node name="MarginContainer3" type="MarginContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer"]
+margin_left = 287.0
+margin_right = 887.0
+margin_bottom = 180.0
+size_flags_horizontal = 0
+custom_constants/margin_top = 60
+
+[node name="CloseCreditsButton" type="Button" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer/MarginContainer3"]
+margin_top = 60.0
+margin_right = 600.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 600, 120 )
+custom_fonts/font = ExtResource( 3 )
+text = "Close"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer2/CenterContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer3/CenterContainer/InstructionsButton" to="." method="_on_InstructionsButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer4/CenterContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer/MarginContainer3/CloseInstructionsPopupButton" to="." method="_on_CloseInstructionsPopupButton_pressed"]
+[connection signal="pressed" from="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer/MarginContainer3/CloseCreditsButton" to="." method="_on_CloseCreditsButton_pressed"]
