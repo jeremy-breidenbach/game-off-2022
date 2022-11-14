@@ -1,16 +1,31 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://src/maps/Cliffs_192x2048.png" type="Texture" id=1]
+[ext_resource path="res://src/maps/cliff-left-2.png" type="Texture" id=1]
+[ext_resource path="res://src/hitboxes/Hitbox.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 94, 1077.5 )
+extents = Vector2( 123.5, 1081.5 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 108.0
+height = 256.0
 
 [node name="Level1_Left" type="StaticBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 1, 1.05 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1, -2.5 )
+position = Vector2( 126.5, 1080.5 )
 shape = SubResource( 1 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 2 )]
+position = Vector2( 260, 904 )
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource( 2 )
+
+[editable path="Hitbox"]

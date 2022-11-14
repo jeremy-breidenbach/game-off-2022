@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 
 Global="*res://src/shared/Global.gd"
 SceneChanger="*res://src/scenes/scene-changer/SceneChanger.tscn"
+Scores="*res://src/shared/Scores.gd"
 
 [display]
 
@@ -47,6 +48,12 @@ move_right={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy"
 
 [physics]
 

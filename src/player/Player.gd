@@ -26,6 +26,7 @@ func _ready():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	Scores.distance_traveled += 1
 
 
 func get_input():
@@ -36,3 +37,7 @@ func get_input():
 		velocity.x += 1
 
 	velocity = velocity.normalized() * MOVE_SPEED
+
+
+func _on_Hurtbox_area_entered(area):
+	queue_free()
