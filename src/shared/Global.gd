@@ -5,6 +5,7 @@ extends Node
 var current_scene = null
 var did_pass_level = false
 var previous_scene_name = null
+var show_mobile_buttons = true
 
 func _ready():
 	# get current scene; it is the last child

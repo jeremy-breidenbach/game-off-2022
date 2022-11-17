@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BackgroundSky_1620x2160.png-112a31afb38fecc8189a2e6c65fd75f1.stex"
+path="res://.import/rock-dude-2.png-98894e7489d02d23527abefd049fcd3a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/maps/BackgroundSky_1620x2160.png"
-dest_files=[ "res://.import/BackgroundSky_1620x2160.png-112a31afb38fecc8189a2e6c65fd75f1.stex" ]
+source_file="res://src/foreground/rock-dude-2.png"
+dest_files=[ "res://.import/rock-dude-2.png-98894e7489d02d23527abefd049fcd3a.stex" ]
 
 [params]
 

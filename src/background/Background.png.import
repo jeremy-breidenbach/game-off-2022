@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cliff-tile-3.png-66c87f8b78ef4dc336d9ceefc82ad413.stex"
+path="res://.import/Background.png-a0be6113bb05194c9086296eeb1d7365.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/maps/cliff-tile-3.png"
-dest_files=[ "res://.import/cliff-tile-3.png-66c87f8b78ef4dc336d9ceefc82ad413.stex" ]
+source_file="res://src/background/Background.png"
+dest_files=[ "res://.import/Background.png-a0be6113bb05194c9086296eeb1d7365.stex" ]
 
 [params]
 

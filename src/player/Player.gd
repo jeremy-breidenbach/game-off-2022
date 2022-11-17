@@ -26,7 +26,7 @@ func _ready():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
-	Scores.distance_traveled += 1
+	Scores.distance_traveled -= 1
 
 
 func get_input():

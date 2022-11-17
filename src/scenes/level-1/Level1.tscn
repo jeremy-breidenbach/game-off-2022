@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/maps/Level1_Left.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/maps/Level1_Right.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/background/Level1_Left.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/background/Level1_Right.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/ui/game-hud/GameHud.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/maps/BackgroundSky_1620x2160.png" type="Texture" id=5]
-[ext_resource path="res://src/maps/Background.gd" type="Script" id=6]
+[ext_resource path="res://src/background/BackgroundSky_1620x2160.png" type="Texture" id=5]
+[ext_resource path="res://src/background/Background.gd" type="Script" id=6]
 [ext_resource path="res://src/ui/game-controls/GameControls.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/maps/Cliff.gd" type="Script" id=8]
+[ext_resource path="res://src/background/Cliff.gd" type="Script" id=8]
+[ext_resource path="res://src/foreground/Spawner.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/foreground/Taco.tscn" type="PackedScene" id=10]
 
 [node name="Level1" type="Node2D"]
 
@@ -46,3 +48,19 @@ current = true
 [node name="GameHud" parent="." instance=ExtResource( 4 )]
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 7 )]
+
+[node name="Spawner" parent="." instance=ExtResource( 9 )]
+position = Vector2( 770, 2268 )
+respawn_time = 1.3
+
+[node name="Spawner2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 384, 2268 )
+respawn_time = 2.5
+
+[node name="Spawner3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1149, 2268 )
+respawn_time = 3.4
+
+[node name="TacoSpawner1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1149, 2268 )
+scenes = [ ExtResource( 10 ) ]

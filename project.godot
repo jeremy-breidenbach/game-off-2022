@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "ForegroundScrollMovement",
+"language": "GDScript",
+"path": "res://src/foreground/ForegroundScrollMovement.gd"
+} ]
+_global_script_class_icons={
+"ForegroundScrollMovement": ""
+}
+
 [application]
 
 config/name="game-off-2022"

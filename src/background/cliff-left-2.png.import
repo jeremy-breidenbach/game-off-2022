@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cliff-right-2.png-ffb5ac68bdce89ea8548debd0b56fcf7.stex"
+path="res://.import/cliff-left-2.png-83e0ccd2d866f7358fd093dd006f09a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/maps/cliff-right-2.png"
-dest_files=[ "res://.import/cliff-right-2.png-ffb5ac68bdce89ea8548debd0b56fcf7.stex" ]
+source_file="res://src/background/cliff-left-2.png"
+dest_files=[ "res://.import/cliff-left-2.png-83e0ccd2d866f7358fd093dd006f09a6.stex" ]
 
 [params]
 
