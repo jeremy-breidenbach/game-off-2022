@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cliff-right-2.png-397ab49742687b76377c37d8ca878161.stex"
+path="res://.import/sheila.png-11fb7bdad58624414f57bc3648e879f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/player/cliff-right-2.png"
-dest_files=[ "res://.import/cliff-right-2.png-397ab49742687b76377c37d8ca878161.stex" ]
+source_file="res://src/foreground/sheila.png"
+dest_files=[ "res://.import/sheila.png-11fb7bdad58624414f57bc3648e879f1.stex" ]
 
 [params]
 

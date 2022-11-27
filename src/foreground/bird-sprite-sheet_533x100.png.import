@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/white Minimalistic toggle.png-011eb896ce12c5b221a3bd3e15c3beed.stex"
+path="res://.import/bird-sprite-sheet_533x100.png-1a910c37502e89ff6d17fa66fe44f84f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/ui/title/white Minimalistic toggle.png"
-dest_files=[ "res://.import/white Minimalistic toggle.png-011eb896ce12c5b221a3bd3e15c3beed.stex" ]
+source_file="res://src/foreground/bird-sprite-sheet_533x100.png"
+dest_files=[ "res://.import/bird-sprite-sheet_533x100.png-1a910c37502e89ff6d17fa66fe44f84f.stex" ]
 
 [params]
 

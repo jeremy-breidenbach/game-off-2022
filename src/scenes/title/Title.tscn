@@ -237,7 +237,7 @@ rect_min_size = Vector2( 1215, 800 )
 [node name="ColorRect" type="ColorRect" parent="CreditsPopup"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.4, 0.4, 0.4, 1 )
+color = Color( 0.188235, 0.141176, 0.290196, 1 )
 
 [node name="ReferenceRect" type="ReferenceRect" parent="CreditsPopup/ColorRect"]
 anchor_right = 1.0
@@ -347,7 +347,6 @@ enabled_focus_mode = 0
 text = "Close"
 
 [node name="SettingsPopup" type="PopupDialog" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -360,7 +359,7 @@ rect_min_size = Vector2( 1215, 800 )
 [node name="ColorRect" type="ColorRect" parent="SettingsPopup"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.4, 0.4, 0.4, 1 )
+color = Color( 0.188235, 0.141176, 0.290196, 1 )
 
 [node name="ReferenceRect" type="ReferenceRect" parent="SettingsPopup/ColorRect"]
 anchor_right = 1.0

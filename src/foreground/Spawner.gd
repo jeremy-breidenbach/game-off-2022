@@ -30,9 +30,9 @@ func start_new_timer():
 
 func _on_Timer_timeout():
 	start_new_timer()
-	print("timer timed out")
+	# print("timer timed out")
 	random_scene.randomize()
 	selected_scene_index = random_scene.randi_range(0, scenes.size()-1)
-	print("selected_scene_index ", selected_scene_index)
+	# print("selected_scene_index ", selected_scene_index)
 	var tmp = scenes[selected_scene_index].instance()
 	add_child(tmp)

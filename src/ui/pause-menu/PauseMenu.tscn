@@ -1,0 +1,179 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/fonts/TitanOne_120.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/fonts/TitanOne_60.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/ui/pause-menu/PauseMenu.gd" type="Script" id=3]
+[ext_resource path="res://src/fonts/TitanOne_36.tres" type="DynamicFont" id=4]
+
+[node name="PauseMenu" type="CanvasLayer"]
+pause_mode = 2
+layer = 100
+script = ExtResource( 3 )
+
+[node name="BlackOverlay" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.352941 )
+
+[node name="PausePopup" type="PopupDialog" parent="."]
+visible = true
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 1215, 800 )
+popup_exclusive = true
+
+[node name="ColorRect" type="ColorRect" parent="PausePopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.188235, 0.141176, 0.290196, 1 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="PausePopup/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0.2, 0.2, 0.2, 1 )
+border_width = 20.0
+editor_only = false
+
+[node name="MarginContainer" type="MarginContainer" parent="PausePopup/ColorRect/ReferenceRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer"]
+margin_right = 1215.0
+margin_bottom = 800.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_right = 1215.0
+margin_bottom = 198.0
+custom_constants/margin_top = 60
+
+[node name="PauseMenuLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+margin_top = 60.0
+margin_right = 1215.0
+margin_bottom = 198.0
+custom_fonts/font = ExtResource( 1 )
+text = "Game Paused"
+align = 1
+
+[node name="ScoresContainer" type="CenterContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+margin_top = 202.0
+margin_right = 1215.0
+margin_bottom = 350.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer"]
+margin_left = 445.0
+margin_right = 769.0
+margin_bottom = 148.0
+custom_constants/margin_top = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer"]
+margin_top = 60.0
+margin_right = 324.0
+margin_bottom = 148.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer"]
+margin_right = 324.0
+margin_bottom = 42.0
+
+[node name="FriendsSavedLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 294.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 4 )
+text = "Friends Saved: "
+
+[node name="FriendsSavedCounter" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+margin_left = 298.0
+margin_right = 324.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer"]
+margin_top = 46.0
+margin_right = 324.0
+margin_bottom = 88.0
+
+[node name="BirdsHitLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 188.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 4 )
+text = "Birds Hit: "
+
+[node name="BirdsHitCounter" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+margin_left = 192.0
+margin_right = 218.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+
+[node name="ContinueButtonContainer" type="CenterContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 202.0
+margin_right = 1215.0
+margin_bottom = 382.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ContinueButtonContainer"]
+margin_left = 307.0
+margin_right = 907.0
+margin_bottom = 180.0
+custom_constants/margin_top = 60
+
+[node name="ContinueButton" type="Button" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ContinueButtonContainer/MarginContainer"]
+unique_name_in_owner = true
+margin_top = 60.0
+margin_right = 600.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 600, 120 )
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+text = "Continue"
+
+[node name="CenterContainer2" type="CenterContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_top = 386.0
+margin_right = 1215.0
+margin_bottom = 566.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer2"]
+margin_left = 307.0
+margin_right = 907.0
+margin_bottom = 180.0
+custom_constants/margin_top = 60
+
+[node name="RestartButton" type="Button" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer2/MarginContainer"]
+margin_top = 60.0
+margin_right = 600.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 600, 120 )
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+text = "Restart Level"
+
+[node name="CenterContainer" type="CenterContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
+margin_top = 570.0
+margin_right = 1215.0
+margin_bottom = 750.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer"]
+margin_left = 307.0
+margin_right = 907.0
+margin_bottom = 180.0
+custom_constants/margin_top = 60
+
+[node name="MainMenuButton" type="Button" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer/MarginContainer"]
+margin_top = 60.0
+margin_right = 600.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 600, 120 )
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+text = "Main Menu"
+
+[connection signal="pressed" from="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ContinueButtonContainer/MarginContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer2/MarginContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer/MarginContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

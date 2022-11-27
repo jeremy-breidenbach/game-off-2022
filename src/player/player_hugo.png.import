@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cliffs_192x2048.png-8bda0882b040673654528cef0b54d6b7.stex"
+path="res://.import/player_hugo.png-3df2558a60cd965c3e45b42be3372c38.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/background/Cliffs_192x2048.png"
-dest_files=[ "res://.import/Cliffs_192x2048.png-8bda0882b040673654528cef0b54d6b7.stex" ]
+source_file="res://src/player/player_hugo.png"
+dest_files=[ "res://.import/player_hugo.png-3df2558a60cd965c3e45b42be3372c38.stex" ]
 
 [params]
 

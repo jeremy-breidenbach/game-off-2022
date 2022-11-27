@@ -4,12 +4,17 @@ extends Node
 
 
 # signals
+signal player_died
+
 # enums
 # constants
 # exported variables
 # public & private variables
-var friends_saved = 0
+var birds_hit = 0
 var distance_traveled = 0
+var friends_saved = 0
+var is_player_alive = true
+
 
 # onready variables
 
@@ -24,3 +29,6 @@ func _ready():
 #func _process(delta):
 	#pass
 
+func set_is_player_alive():
+	is_player_alive = false
+	emit_signal("player_died")

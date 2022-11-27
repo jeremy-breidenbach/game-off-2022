@@ -17,5 +17,10 @@ func _ready():
 
 func _physics_process(delta):
 	move()
+	despawn_when_outside_view()
 
 
+func despawn_obstacle():
+	if global_position.y < -100:
+		# print("despawning obstacle!")
+		queue_free()

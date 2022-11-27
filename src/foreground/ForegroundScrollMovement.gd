@@ -19,10 +19,16 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#pass
+func _physics_process(_delta):
+	move()
+	despawn_when_outside_view()
 
 
 func move():
 	position.y -= scroll_speed
+
+
+func despawn_when_outside_view():
+	if global_position.y < -100:
+		# print("despawing item")
+		queue_free()

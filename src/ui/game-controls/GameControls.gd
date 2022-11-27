@@ -21,6 +21,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#pass
-
+func _process(_delta):
+	if get_tree().paused:
+		visible = false
+	else:
+		visible = true
