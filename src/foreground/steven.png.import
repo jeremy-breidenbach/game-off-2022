@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/taco.png-65701f54e2fc729a73e08b3adc333fdc.stex"
+path="res://.import/steven.png-e49acdd1a0d0bb49d4afe33a5fdc4d29.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/foreground/taco.png"
-dest_files=[ "res://.import/taco.png-65701f54e2fc729a73e08b3adc333fdc.stex" ]
+source_file="res://src/foreground/steven.png"
+dest_files=[ "res://.import/steven.png-e49acdd1a0d0bb49d4afe33a5fdc4d29.stex" ]
 
 [params]
 

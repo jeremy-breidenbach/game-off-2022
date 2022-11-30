@@ -17,6 +17,7 @@ var velocity = Vector2.ZERO
 # private variables
 
 # onready variables
+onready var animation_player = $AnimationPlayer
 onready var sprite = $Sprite
 
 
@@ -27,6 +28,7 @@ func _ready():
 func _physics_process(_delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+	Scores.total_score += 1
 	Scores.distance_traveled -= 1
 
 
@@ -45,4 +47,9 @@ func get_input():
 
 func _on_Hurtbox_area_entered(_area):
 	Scores.emit_signal("player_died")
+	animation_player.play("Death")
+	sprite.visible = false
+
+
+func _on_AnimationPlayer_animation_finished(_anim_name):
 	queue_free()

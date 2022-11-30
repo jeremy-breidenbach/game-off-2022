@@ -14,6 +14,7 @@ var birds_hit = 0
 var distance_traveled = 0
 var friends_saved = 0
 var is_player_alive = true
+var total_score = 0
 
 
 # onready variables
@@ -28,6 +29,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 	#pass
+
+func reset_scores():
+	birds_hit = 0
+	distance_traveled = 0
+	friends_saved = 0
+	is_player_alive = true
+	total_score = 0
+
 
 func set_is_player_alive():
 	is_player_alive = false

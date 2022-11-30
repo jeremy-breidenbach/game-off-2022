@@ -15,3 +15,7 @@ data_*/
 
 # Exported builds
 build/
+
+# bird sound from mixkit, cannot be distributed with source files
+src/sounds/mixkit-little-bird-creak-in-the-swamp-25.wav
+src/sounds/mixkit-little-bird-creak-in-the-swamp-25.wav.import

@@ -16,5 +16,9 @@ func _ready():
 
 
 func _on_Area2D_body_entered(_body):
-	Scores.friends_saved += 1
+	if is_in_group("friends"):
+		Scores.friends_saved += 1
+		Scores.total_score += 1000
+	if is_in_group("items"):
+		Scores.total_score += 100
 	queue_free()

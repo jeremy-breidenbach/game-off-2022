@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/background/Level1_Left.tscn" type="PackedScene" id=2]
@@ -7,11 +7,15 @@
 [ext_resource path="res://src/background/BackgroundSky_1620x2160.png" type="Texture" id=5]
 [ext_resource path="res://src/background/Background.gd" type="Script" id=6]
 [ext_resource path="res://src/ui/game-controls/GameControls.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/foreground/Steven.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/foreground/Spawner.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/foreground/Taco.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/foreground/Sheila.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/foreground/Bird.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/player/Rope.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/ui/pause-menu/PauseMenu.tscn" type="PackedScene" id=13]
-[ext_resource path="res://src/foreground/Sheila.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/foreground/RopeCoil.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/player/AnchorPoint.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/foreground/SatellitePhone.tscn" type="PackedScene" id=16]
 
 [node name="Level1" type="Node2D"]
 
@@ -38,8 +42,14 @@ position = Vector2( 1300, 0 )
 [node name="Level1_Right2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1300, 2160 )
 
+[node name="NewRope" parent="." instance=ExtResource( 12 )]
+position = Vector2( 767, -140 )
+
+[node name="AnchorPoint" parent="." groups=["anchor"] instance=ExtResource( 15 )]
+position = Vector2( 770, -140 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 770, 216 )
+position = Vector2( 770, 262 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 810, 1080 )
@@ -65,24 +75,24 @@ respawn_time = 6.7
 
 [node name="Spawner5" parent="ObstacleSpawners" instance=ExtResource( 9 )]
 position = Vector2( 967, 2268 )
-respawn_time = 1.9
+respawn_time = 5.0
 
 [node name="FriendSpawners" type="Node2D" parent="."]
 
-[node name="TacoSpawner1" parent="FriendSpawners" instance=ExtResource( 9 )]
-position = Vector2( 384, 2380 )
-respawn_time = 1.7
-scenes = [ ExtResource( 10 ) ]
-
-[node name="TacoSpawner2" parent="FriendSpawners" instance=ExtResource( 9 )]
-position = Vector2( 770, 2380 )
-respawn_time = 3.5
-scenes = [ ExtResource( 10 ) ]
-
 [node name="FriendSpawner1" parent="FriendSpawners" instance=ExtResource( 9 )]
 position = Vector2( 1149, 2380 )
-respawn_time = 5.0
-scenes = [ ExtResource( 14 ) ]
+respawn_time = 10.0
+scenes = [ ExtResource( 10 ), ExtResource( 16 ), ExtResource( 14 ) ]
+
+[node name="FriendSpawner2" parent="FriendSpawners" instance=ExtResource( 9 )]
+position = Vector2( 384, 2380 )
+respawn_time = 7.0
+scenes = [ ExtResource( 8 ), ExtResource( 16 ), ExtResource( 14 ) ]
+
+[node name="FriendSpawner3" parent="FriendSpawners" instance=ExtResource( 9 )]
+position = Vector2( 770, 2380 )
+respawn_time = 3.5
+scenes = [ ExtResource( 16 ), ExtResource( 14 ) ]
 
 [node name="BirdSpawners" type="Node2D" parent="."]
 

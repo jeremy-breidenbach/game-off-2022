@@ -36,17 +36,14 @@ func _on_ContinueButton_pressed():
 
 
 func _on_RestartButton_pressed():
-	Scores.friends_saved = 0
-	Scores.distance_traveled = 0
+	Scores.reset_scores()
 	Global.goto_scene("res://src/scenes/level-1/Level1.tscn")
 	toggle_pause()
 	pause_popup.visible = is_paused
 
 
 func _on_MainMenuButton_pressed():
-	Scores.birds_hit = 0
-	Scores.friends_saved = 0
-	Scores.distance_traveled = 0
+	Scores.reset_scores()
 	Global.goto_scene("res://src/scenes/title/Title.tscn")
 	toggle_pause()
 	pause_popup.visible = is_paused

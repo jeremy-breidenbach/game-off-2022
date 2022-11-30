@@ -7,7 +7,7 @@
 radius = 48.0
 height = 266.0
 
-[node name="Sheila" type="Node2D"]
+[node name="Sheila" type="Node2D" groups=["friends"]]
 script = ExtResource( 2 )
 scroll_speed = 12
 

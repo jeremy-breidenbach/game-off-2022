@@ -22,13 +22,13 @@ _global_script_class_icons={
 
 config/name="game-off-2022"
 run/main_scene="res://src/scenes/title/Title.tscn"
-config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://src/shared/Global.gd"
 SceneChanger="*res://src/scenes/scene-changer/SceneChanger.tscn"
 Scores="*res://src/shared/Scores.gd"
+MusicController="*res://src/shared/MusicController.tscn"
 
 [display]
 

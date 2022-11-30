@@ -17,7 +17,6 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.352941 )
 
 [node name="PausePopup" type="PopupDialog" parent="."]
-visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 1215, 800 )
