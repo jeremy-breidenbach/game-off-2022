@@ -6,8 +6,8 @@ NOTE: the sound for the bird impact cannot be distributed with source files per 
 
 ## TODO
 ### Credits
-Bird impact sound from Mixkit: https://mixkit.co/free-sound-effects/bird/
-Onscreen control images from Kenney: https://www.kenney.nl/assets/onscreen-controls
-Music:
-Impact Sound:
-Fonts:
+- Bird impact sound from Mixkit: https://mixkit.co/free-sound-effects/bird/
+- Onscreen control images from Kenney: https://www.kenney.nl/assets/onscreen-controls
+- Music:
+- Impact Sound:
+- Fonts:
