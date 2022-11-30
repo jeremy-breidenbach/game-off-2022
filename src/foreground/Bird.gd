@@ -52,6 +52,7 @@ func _on_Area2D_body_entered(_body):
 	area_2d.set_deferred("monitoring", false)
 	state = State.DEATH
 	Scores.birds_hit += 1
+	Scores.total_score += 50
 	animation_player.play("Death")
 	timer.start(0.5)
 

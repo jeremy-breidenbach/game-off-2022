@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/fonts/TitanOne_36.tres" type="DynamicFont" id=1]
-[ext_resource path="res://src/fonts/TitanOne_60.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/ui/game-hud/GameHud.gd" type="Script" id=3]
 [ext_resource path="res://src/fonts/Inconsolata_SemiExpanded_Black_72.tres" type="DynamicFont" id=4]
 
@@ -22,16 +21,6 @@ margin_bottom = 166.0
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 margin_right = 180.0
 margin_bottom = 76.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/MarginContainer2"]
-visible = false
-margin_right = 180.0
-margin_bottom = 76.0
-custom_fonts/normal_font = ExtResource( 2 )
-bbcode_enabled = true
-bbcode_text = "5"
-text = "5"
-fit_content_height = true
 
 [node name="FriendsSavedLabel" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer2"]
 unique_name_in_owner = true
@@ -72,18 +61,7 @@ margin_bottom = 166.0
 margin_right = 280.0
 margin_bottom = 76.0
 
-[node name="DistanceCountLabel" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/MarginContainer2"]
-unique_name_in_owner = true
-visible = false
-margin_right = 280.0
-margin_bottom = 76.0
-custom_fonts/normal_font = ExtResource( 2 )
-bbcode_enabled = true
-bbcode_text = "[right]150,000[/right]"
-text = "150,000"
-fit_content_height = true
-
-[node name="DistanceCountLabel2" type="Label" parent="MarginContainer2/VBoxContainer/MarginContainer2"]
+[node name="DistanceCountLabel" type="Label" parent="MarginContainer2/VBoxContainer/MarginContainer2"]
 unique_name_in_owner = true
 margin_right = 280.0
 margin_bottom = 76.0

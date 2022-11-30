@@ -15,15 +15,18 @@ onready var birds_hit_counter = $"%BirdsHitCounter"
 onready var black_overlay = $BlackOverlay
 onready var continue_button = $"%ContinueButton"
 onready var continue_button_container = $"%ContinueButtonContainer"
+onready var distance_counter = $"%DistanceCounter"
 onready var friends_saved_counter = $"%FriendsSavedCounter"
+onready var items_collected_counter = $"%ItemsCollectedCounter"
 onready var pause_menu_label = $"%PauseMenuLabel"
 onready var pause_popup = $PausePopup
 onready var scores_container = $"%ScoresContainer"
+onready var total_score = $"%TotalScore"
 
 func _input(event):
 	if event.is_action_pressed("pause_game"):
 		toggle_pause()
-		pause_popup.popup_centered()
+		pause_popup.popup_centered(Vector2(1215, 820))
 
 
 func _ready():
@@ -57,12 +60,15 @@ func toggle_pause():
 
 func update_pause_menu_player_dead():
 	birds_hit_counter.text = String(Scores.birds_hit)
+	distance_counter.text = String(Scores.distance_traveled * -1)
 	friends_saved_counter.text = String(Scores.friends_saved)
+	items_collected_counter.text = String(Scores.items_collected)
+	total_score.text = String(Scores.total_score)
 	pause_menu_label.text = "Game Over"
 	continue_button_container.visible = false
 	scores_container.visible = true
 	toggle_pause()
-	pause_popup.popup_centered()
+	pause_popup.popup_centered(Vector2(1215, 920))
 
 
 

@@ -14,6 +14,7 @@ var birds_hit = 0
 var distance_traveled = 0
 var friends_saved = 0
 var is_player_alive = true
+var items_collected = 0
 var total_score = 0
 
 
@@ -35,6 +36,7 @@ func reset_scores():
 	distance_traveled = 0
 	friends_saved = 0
 	is_player_alive = true
+	items_collected = 0
 	total_score = 0
 
 

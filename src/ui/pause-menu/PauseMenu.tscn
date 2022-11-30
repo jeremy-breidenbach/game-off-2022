@@ -19,7 +19,7 @@ color = Color( 0, 0, 0, 0.352941 )
 [node name="PausePopup" type="PopupDialog" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_min_size = Vector2( 1215, 800 )
+rect_min_size = Vector2( 1215, 820 )
 popup_exclusive = true
 
 [node name="ColorRect" type="ColorRect" parent="PausePopup"]
@@ -40,7 +40,7 @@ anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer"]
 margin_right = 1215.0
-margin_bottom = 800.0
+margin_bottom = 820.0
 
 [node name="MarginContainer" type="MarginContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
 margin_right = 1215.0
@@ -61,53 +61,127 @@ unique_name_in_owner = true
 visible = false
 margin_top = 202.0
 margin_right = 1215.0
-margin_bottom = 350.0
+margin_bottom = 488.0
 
 [node name="MarginContainer" type="MarginContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer"]
-margin_left = 445.0
-margin_right = 769.0
-margin_bottom = 148.0
+margin_left = 307.0
+margin_right = 907.0
+margin_bottom = 286.0
 custom_constants/margin_top = 60
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer"]
 margin_top = 60.0
-margin_right = 324.0
-margin_bottom = 148.0
+margin_right = 600.0
+margin_bottom = 286.0
+rect_min_size = Vector2( 600, 0 )
+custom_constants/hseparation = 30
+columns = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer"]
-margin_right = 324.0
-margin_bottom = 42.0
-
-[node name="FriendsSavedLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer/HBoxContainer"]
-margin_right = 294.0
+[node name="FriendsSavedLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_right = 309.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 4 )
 text = "Friends Saved: "
 
-[node name="FriendsSavedCounter" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="FriendsSavedCounter" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
 unique_name_in_owner = true
-margin_left = 298.0
-margin_right = 324.0
+margin_left = 339.0
+margin_right = 365.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 4 )
 text = "0"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer"]
-margin_top = 46.0
-margin_right = 324.0
-margin_bottom = 88.0
-
-[node name="BirdsHitLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
-margin_right = 188.0
+[node name="FriendsdMultiplyer" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_left = 395.0
+margin_right = 521.0
 margin_bottom = 42.0
+custom_fonts/font = ExtResource( 4 )
+text = "x 1000"
+
+[node name="ItemsCollectedLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_top = 46.0
+margin_right = 309.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 4 )
+text = "Items Collected:"
+
+[node name="ItemsCollectedCounter" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+margin_left = 339.0
+margin_top = 46.0
+margin_right = 365.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+
+[node name="ItemsMultiplyer" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_left = 395.0
+margin_top = 46.0
+margin_right = 521.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 4 )
+text = "x 100"
+
+[node name="BirdsHitLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_top = 92.0
+margin_right = 309.0
+margin_bottom = 134.0
 custom_fonts/font = ExtResource( 4 )
 text = "Birds Hit: "
 
-[node name="BirdsHitCounter" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="BirdsHitCounter" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
 unique_name_in_owner = true
-margin_left = 192.0
-margin_right = 218.0
-margin_bottom = 42.0
+margin_left = 339.0
+margin_top = 92.0
+margin_right = 365.0
+margin_bottom = 134.0
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+
+[node name="BirdsMultiplyer" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_left = 395.0
+margin_top = 92.0
+margin_right = 521.0
+margin_bottom = 134.0
+custom_fonts/font = ExtResource( 4 )
+text = "x 50"
+
+[node name="DistanceLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_top = 138.0
+margin_right = 309.0
+margin_bottom = 180.0
+custom_fonts/font = ExtResource( 4 )
+text = "Distance:"
+
+[node name="DistanceCounter" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+margin_left = 339.0
+margin_top = 138.0
+margin_right = 365.0
+margin_bottom = 180.0
+custom_fonts/font = ExtResource( 4 )
+text = "0"
+
+[node name="DistanceMultiplyer" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_left = 395.0
+margin_top = 138.0
+margin_right = 521.0
+margin_bottom = 180.0
+custom_fonts/font = ExtResource( 4 )
+
+[node name="TotalScoreLabel" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+margin_top = 184.0
+margin_right = 309.0
+margin_bottom = 226.0
+custom_fonts/font = ExtResource( 4 )
+text = "Total Score:"
+
+[node name="TotalScore" type="Label" parent="PausePopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/ScoresContainer/MarginContainer/GridContainer"]
+unique_name_in_owner = true
+margin_left = 339.0
+margin_top = 184.0
+margin_right = 365.0
+margin_bottom = 226.0
 custom_fonts/font = ExtResource( 4 )
 text = "0"
 
