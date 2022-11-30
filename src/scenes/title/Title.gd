@@ -5,12 +5,21 @@ onready var credits_popup = $CreditsPopup
 onready var instructions_popup = $InstructionsPopup
 onready var settings_popup = $SettingsPopup
 onready var show_mobile_check_button = $"%ShowMobileCheckButton"
+# Credits Rich Text Labels
+onready var bird_sound_credits = $"%BirdSoundCredits"
+onready var font_credits = $"%FontCredits"
+onready var impact_sound_credits = $"%ImpactSoundCredits"
+onready var screen_control_credits = $"%ScreenControlCredits"
 onready var toggle_button_credits = $"%ToggleButtonCredits"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	show_mobile_check_button.pressed = Global.show_mobile_buttons
+	bird_sound_credits.connect("meta_clicked", self, "_on_RichTextLabel_meta_clicked")
+	font_credits.connect("meta_clicked", self, "_on_RichTextLabel_meta_clicked")
+	impact_sound_credits.connect("meta_clicked", self, "_on_RichTextLabel_meta_clicked")
+	screen_control_credits.connect("meta_clicked", self, "_on_RichTextLabel_meta_clicked")
 	toggle_button_credits.connect("meta_clicked", self, "_on_RichTextLabel_meta_clicked")
 
 

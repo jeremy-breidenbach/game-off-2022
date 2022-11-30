@@ -166,6 +166,7 @@ enabled_focus_mode = 0
 text = "Settings"
 
 [node name="InstructionsPopup" type="PopupDialog" parent="."]
+visible = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -607.5
@@ -198,17 +199,17 @@ custom_constants/margin_bottom = 20
 [node name="VBoxContainer" type="VBoxContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer"]
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 1195.0
-margin_bottom = 780.0
+margin_right = 1198.0
+margin_bottom = 819.0
 
 [node name="MarginContainer" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
-margin_right = 1175.0
+margin_right = 1178.0
 margin_bottom = 158.0
 custom_constants/margin_top = 20
 
 [node name="Label" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer"]
 margin_top = 20.0
-margin_right = 1175.0
+margin_right = 1178.0
 margin_bottom = 158.0
 custom_fonts/font = ExtResource( 2 )
 text = "Instructions"
@@ -216,27 +217,56 @@ align = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
 margin_top = 162.0
-margin_right = 1175.0
-margin_bottom = 264.0
+margin_right = 1178.0
+margin_bottom = 615.0
 custom_constants/margin_top = 60
 custom_constants/margin_left = 60
 
-[node name="Label" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2"]
 margin_left = 60.0
 margin_top = 60.0
-margin_right = 1175.0
-margin_bottom = 102.0
+margin_right = 1178.0
+margin_bottom = 453.0
+custom_constants/separation = 30
+
+[node name="Label" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+margin_right = 1118.0
+margin_bottom = 177.0
 custom_fonts/font = ExtResource( 4 )
-text = "Some text goes here..."
+text = "Move the character Left and Right to avoid the rocks,
+rescue your friends, and collect items. Try to get a
+high score by collecting as many friends and items as
+you can!"
+
+[node name="Label2" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+margin_top = 207.0
+margin_right = 1118.0
+margin_bottom = 249.0
+custom_fonts/font = ExtResource( 4 )
+text = "Move Left: Left Arrow key on keyboard or touch button"
+
+[node name="Label3" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+margin_top = 279.0
+margin_right = 1118.0
+margin_bottom = 321.0
+custom_fonts/font = ExtResource( 4 )
+text = "Move Right: Right Arrow key on keyboard or touch button"
+
+[node name="Label4" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+margin_top = 351.0
+margin_right = 1118.0
+margin_bottom = 393.0
+custom_fonts/font = ExtResource( 4 )
+text = "Pause Game: Space key on keyboard or touch button"
 
 [node name="CenterContainer" type="CenterContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
-margin_top = 268.0
-margin_right = 1175.0
-margin_bottom = 448.0
+margin_top = 619.0
+margin_right = 1178.0
+margin_bottom = 799.0
 
 [node name="MarginContainer3" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer"]
-margin_left = 287.0
-margin_right = 887.0
+margin_left = 289.0
+margin_right = 889.0
 margin_bottom = 180.0
 size_flags_horizontal = 0
 custom_constants/margin_top = 60
@@ -286,7 +316,7 @@ custom_constants/margin_bottom = 20
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1195.0
-margin_bottom = 780.0
+margin_bottom = 878.0
 
 [node name="MarginContainer" type="MarginContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
 margin_right = 1175.0
@@ -304,7 +334,7 @@ align = 1
 [node name="MarginContainer2" type="MarginContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
 margin_top = 162.0
 margin_right = 1175.0
-margin_bottom = 449.0
+margin_bottom = 674.0
 custom_constants/margin_top = 60
 custom_constants/margin_left = 60
 
@@ -312,50 +342,75 @@ custom_constants/margin_left = 60
 margin_left = 60.0
 margin_top = 60.0
 margin_right = 1175.0
-margin_bottom = 287.0
+margin_bottom = 512.0
+custom_constants/separation = 30
 
-[node name="Label" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+[node name="GameDesignLabel" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
 margin_right = 1115.0
-margin_bottom = 42.0
+margin_bottom = 87.0
 custom_fonts/font = ExtResource( 4 )
-text = "Jeremy Breidenbach"
+text = "Game design, development, and art by 
+        Jeremy, Autumn, Eve, and Meghan Breidenbach"
 
-[node name="Label2" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
-margin_top = 46.0
+[node name="ScreenControlCredits" type="RichTextLabel" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 117.0
 margin_right = 1115.0
-margin_bottom = 88.0
-custom_fonts/font = ExtResource( 4 )
-text = "Autumn Breidenbach"
-
-[node name="Label3" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
-margin_top = 92.0
-margin_right = 1115.0
-margin_bottom = 134.0
-custom_fonts/font = ExtResource( 4 )
-text = "Eve Breidenbach"
-
-[node name="Label4" type="Label" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
-margin_top = 138.0
-margin_right = 1115.0
-margin_bottom = 180.0
-custom_fonts/font = ExtResource( 4 )
-text = "Meghan Breidenbach"
+margin_bottom = 160.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "On-screen control icons from [color=#35abd6][url=https://www.kenney.nl/assets/onscreen-controls]Kenney[/url][/color]"
+text = "On-screen control icons from Kenney"
+fit_content_height = true
 
 [node name="ToggleButtonCredits" type="RichTextLabel" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
 unique_name_in_owner = true
-margin_top = 184.0
+margin_top = 190.0
 margin_right = 1115.0
-margin_bottom = 227.0
+margin_bottom = 233.0
 custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
-bbcode_text = "[color=#35abd6][url=https://www.flaticon.com/free-icon/button_5549898]Toggle icons created by FR_Media - Flaticon[/url][/color]"
-text = "Toggle icons created by FR_Media - Flaticon"
+bbcode_text = "Toggle icons from [color=#35abd6][url=https://www.flaticon.com/free-icon/button_5549898]FR_Media - Flaticon[/url][/color]"
+text = "Toggle icons from FR_Media - Flaticon"
+fit_content_height = true
+
+[node name="FontCredits" type="RichTextLabel" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 263.0
+margin_right = 1115.0
+margin_bottom = 306.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[color=#35abd6][url=https://fonts.google.com/specimen/Titan+One]Titan One[/url][/color] and [color=#35abd6][url=https://fonts.google.com/specimen/Inconsolata]Inconsolata[/url][/color] fonts from Google Fonts"
+text = "Titan One and Inconsolata fonts from Google Fonts"
+fit_content_height = true
+
+[node name="ImpactSoundCredits" type="RichTextLabel" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 336.0
+margin_right = 1115.0
+margin_bottom = 379.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Impact sound effect from [color=#35abd6][url=https://opengameart.org/content/wall-impact]spookymodem[/url][/color]"
+text = "Impact sound effect from spookymodem"
+fit_content_height = true
+
+[node name="BirdSoundCredits" type="RichTextLabel" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 409.0
+margin_right = 1115.0
+margin_bottom = 452.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Bird sound effect from [color=#35abd6][url=https://mixkit.co/free-sound-effects/bird/]Mixkit[/url][/color]"
+text = "Bird sound effect from Mixkit"
 fit_content_height = true
 
 [node name="CenterContainer" type="CenterContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
-margin_top = 453.0
+margin_top = 678.0
 margin_right = 1175.0
-margin_bottom = 633.0
+margin_bottom = 858.0
 
 [node name="MarginContainer3" type="MarginContainer" parent="CreditsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer"]
 margin_left = 287.0
