@@ -13,14 +13,26 @@ _global_script_classes=[ {
 "class": "ForegroundScrollMovement",
 "language": "GDScript",
 "path": "res://src/foreground/ForegroundScrollMovement.gd"
+}, {
+"base": "RichTextEffect",
+"class": "RichTextGhost",
+"language": "GDScript",
+"path": "res://src/scenes/intro/GhostTextEffect.gd"
+}, {
+"base": "RichTextEffect",
+"class": "RichTextNervous",
+"language": "GDScript",
+"path": "res://src/scenes/intro/NervousTextEffect.gd"
 } ]
 _global_script_class_icons={
-"ForegroundScrollMovement": ""
+"ForegroundScrollMovement": "",
+"RichTextGhost": "",
+"RichTextNervous": ""
 }
 
 [application]
 
-config/name="game-off-2022"
+config/name="Sky Jump"
 run/main_scene="res://src/scenes/title/Title.tscn"
 
 [autoload]

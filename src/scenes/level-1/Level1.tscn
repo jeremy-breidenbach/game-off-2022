@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/background/Level1_Left.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://src/foreground/RopeCoil.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/player/AnchorPoint.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/foreground/SatellitePhone.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/foreground/Sophie.tscn" type="PackedScene" id=17]
 
 [node name="Level1" type="Node2D"]
 
@@ -58,24 +59,32 @@ current = true
 [node name="ObstacleSpawners" type="Node2D" parent="."]
 
 [node name="Spawner" parent="ObstacleSpawners" instance=ExtResource( 9 )]
-position = Vector2( 770, 2268 )
+position = Vector2( 810, 2268 )
 respawn_time = 3.0
 
 [node name="Spawner2" parent="ObstacleSpawners" instance=ExtResource( 9 )]
-position = Vector2( 384, 2268 )
+position = Vector2( 430, 2268 )
 respawn_time = 2.5
 
 [node name="Spawner3" parent="ObstacleSpawners" instance=ExtResource( 9 )]
-position = Vector2( 1149, 2268 )
+position = Vector2( 1180, 2268 )
 respawn_time = 4.3
 
 [node name="Spawner4" parent="ObstacleSpawners" instance=ExtResource( 9 )]
-position = Vector2( 573, 2268 )
+position = Vector2( 620, 2268 )
 respawn_time = 6.7
 
 [node name="Spawner5" parent="ObstacleSpawners" instance=ExtResource( 9 )]
-position = Vector2( 967, 2268 )
+position = Vector2( 990, 2268 )
 respawn_time = 5.0
+
+[node name="Spawner6" parent="ObstacleSpawners" instance=ExtResource( 9 )]
+position = Vector2( 240, 2268 )
+respawn_time = 8.8
+
+[node name="Spawner7" parent="ObstacleSpawners" instance=ExtResource( 9 )]
+position = Vector2( 1370, 2268 )
+respawn_time = 9.1
 
 [node name="FriendSpawners" type="Node2D" parent="."]
 
@@ -92,7 +101,7 @@ scenes = [ ExtResource( 8 ), ExtResource( 16 ), ExtResource( 14 ) ]
 [node name="FriendSpawner3" parent="FriendSpawners" instance=ExtResource( 9 )]
 position = Vector2( 770, 2380 )
 respawn_time = 3.5
-scenes = [ ExtResource( 16 ), ExtResource( 14 ) ]
+scenes = [ ExtResource( 16 ), ExtResource( 14 ), ExtResource( 17 ) ]
 
 [node name="BirdSpawners" type="Node2D" parent="."]
 

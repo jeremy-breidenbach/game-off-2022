@@ -1,6 +1,6 @@
 # class_name
 
-extends CanvasLayer
+extends Control
 
 
 # signals
@@ -14,18 +14,14 @@ extends CanvasLayer
 # built in _ready method
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Global.show_mobile_buttons:
-		visible = true
-	else:
-		visible = false
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	if Global.show_mobile_buttons:
-		if get_tree().paused:
-			visible = false
-		else:
-			visible = true
-	else:
-		visible = false
+#func _process(delta):
+	#pass
+
+
+
+func _on_Timer_timeout():
+	SceneChanger.change_scene("res://src/scenes/level-1/Level1.tscn", 0.25)

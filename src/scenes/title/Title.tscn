@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/scenes/title/Title.gd" type="Script" id=1]
 [ext_resource path="res://src/fonts/TitanOne_120.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/fonts/TitanOne_60.tres" type="DynamicFont" id=3]
 [ext_resource path="res://src/fonts/TitanOne_36.tres" type="DynamicFont" id=4]
 [ext_resource path="res://src/ui/title/toggle-button-128.png" type="Texture" id=5]
+[ext_resource path="res://src/fonts/TitanOne_240.tres" type="DynamicFont" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -36,15 +37,16 @@ margin_bottom = 2160.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 margin_right = 1620.0
-margin_bottom = 646.0
+margin_bottom = 476.0
 custom_constants/margin_top = 200
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
 margin_top = 200.0
 margin_right = 1620.0
-margin_bottom = 646.0
+margin_bottom = 476.0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
 margin_right = 1620.0
 margin_bottom = 70.0
 custom_fonts/font = ExtResource( 3 )
@@ -52,21 +54,19 @@ text = "If"
 align = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-margin_top = 74.0
 margin_right = 1620.0
-margin_bottom = 352.0
-custom_fonts/normal_font = ExtResource( 2 )
+margin_bottom = 276.0
+custom_fonts/normal_font = ExtResource( 6 )
 bbcode_enabled = true
-bbcode_text = "[center]All Your Friends
-Jumped Off a Cliff...[/center]"
-text = "All Your Friends
-Jumped Off a Cliff..."
+bbcode_text = "[center]Sky Jump[/center]"
+text = "Sky Jump"
 fit_content_height = true
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-margin_top = 356.0
+visible = false
+margin_top = 143.0
 margin_right = 1620.0
-margin_bottom = 446.0
+margin_bottom = 233.0
 custom_constants/margin_top = 20
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer"]
@@ -78,15 +78,15 @@ text = "Would You Jump Too?"
 align = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 650.0
+margin_top = 480.0
 margin_right = 1620.0
-margin_bottom = 890.0
-custom_constants/margin_top = 120
+margin_bottom = 900.0
+custom_constants/margin_top = 300
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer2"]
-margin_top = 120.0
+margin_top = 300.0
 margin_right = 1620.0
-margin_bottom = 240.0
+margin_bottom = 420.0
 
 [node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer2/CenterContainer"]
 unique_name_in_owner = true
@@ -100,9 +100,9 @@ enabled_focus_mode = 0
 text = "Play"
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 894.0
+margin_top = 904.0
 margin_right = 1620.0
-margin_bottom = 1074.0
+margin_bottom = 1084.0
 custom_constants/margin_top = 60
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer3"]
@@ -122,9 +122,9 @@ enabled_focus_mode = 0
 text = "Instructions"
 
 [node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 1078.0
+margin_top = 1088.0
 margin_right = 1620.0
-margin_bottom = 1258.0
+margin_bottom = 1268.0
 custom_constants/margin_top = 60
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer4"]
@@ -144,9 +144,9 @@ enabled_focus_mode = 0
 text = "Credits"
 
 [node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 1262.0
+margin_top = 1272.0
 margin_right = 1620.0
-margin_bottom = 1442.0
+margin_bottom = 1452.0
 custom_constants/margin_top = 60
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer5"]
@@ -166,7 +166,6 @@ enabled_focus_mode = 0
 text = "Settings"
 
 [node name="InstructionsPopup" type="PopupDialog" parent="."]
-visible = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -607.5
@@ -199,17 +198,17 @@ custom_constants/margin_bottom = 20
 [node name="VBoxContainer" type="VBoxContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer"]
 margin_left = 20.0
 margin_top = 20.0
-margin_right = 1198.0
-margin_bottom = 819.0
+margin_right = 1195.0
+margin_bottom = 954.0
 
 [node name="MarginContainer" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
-margin_right = 1178.0
+margin_right = 1175.0
 margin_bottom = 158.0
 custom_constants/margin_top = 20
 
 [node name="Label" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer"]
 margin_top = 20.0
-margin_right = 1178.0
+margin_right = 1175.0
 margin_bottom = 158.0
 custom_fonts/font = ExtResource( 2 )
 text = "Instructions"
@@ -217,20 +216,20 @@ align = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
 margin_top = 162.0
-margin_right = 1178.0
-margin_bottom = 615.0
+margin_right = 1175.0
+margin_bottom = 750.0
 custom_constants/margin_top = 60
 custom_constants/margin_left = 60
 
 [node name="VBoxContainer" type="VBoxContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2"]
 margin_left = 60.0
 margin_top = 60.0
-margin_right = 1178.0
-margin_bottom = 453.0
+margin_right = 1175.0
+margin_bottom = 588.0
 custom_constants/separation = 30
 
 [node name="Label" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
-margin_right = 1118.0
+margin_right = 1115.0
 margin_bottom = 177.0
 custom_fonts/font = ExtResource( 4 )
 text = "Move the character Left and Right to avoid the rocks,
@@ -240,33 +239,36 @@ you can!"
 
 [node name="Label2" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
 margin_top = 207.0
-margin_right = 1118.0
-margin_bottom = 249.0
+margin_right = 1115.0
+margin_bottom = 294.0
 custom_fonts/font = ExtResource( 4 )
-text = "Move Left: Left Arrow key on keyboard or touch button"
+text = "Move Left: Left Arrow key (keyboard or touchscreen
+button)"
 
 [node name="Label3" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
-margin_top = 279.0
-margin_right = 1118.0
-margin_bottom = 321.0
+margin_top = 324.0
+margin_right = 1115.0
+margin_bottom = 411.0
 custom_fonts/font = ExtResource( 4 )
-text = "Move Right: Right Arrow key on keyboard or touch button"
+text = "Move Right: Right Arrow key (keyboard or touchscreen
+button)"
 
 [node name="Label4" type="Label" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
-margin_top = 351.0
-margin_right = 1118.0
-margin_bottom = 393.0
+margin_top = 441.0
+margin_right = 1115.0
+margin_bottom = 528.0
 custom_fonts/font = ExtResource( 4 )
-text = "Pause Game: Space key on keyboard or touch button"
+text = "Pause Game: Space key (keyboard) or 
+Pause button (touchscreen)"
 
 [node name="CenterContainer" type="CenterContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer"]
-margin_top = 619.0
-margin_right = 1178.0
-margin_bottom = 799.0
+margin_top = 754.0
+margin_right = 1175.0
+margin_bottom = 934.0
 
 [node name="MarginContainer3" type="MarginContainer" parent="InstructionsPopup/ColorRect/ReferenceRect/MarginContainer/VBoxContainer/CenterContainer"]
-margin_left = 289.0
-margin_right = 889.0
+margin_left = 287.0
+margin_right = 887.0
 margin_bottom = 180.0
 size_flags_horizontal = 0
 custom_constants/margin_top = 60
